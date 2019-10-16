@@ -30,8 +30,8 @@ router.use(passport.initialize());
 
 const Sequelize = require('sequelize');
 // initialize an instance of Sequelize
-const sequelize = new Sequelize('usersdatabase', 'root', 'root', {
-  host: 'localhost',
+const sequelize = new Sequelize('RZkQki6aHw', 'RZkQki6aHw', 'ExLNJYnrEF', {
+  host: 'remotemysql.com',
   dialect: 'mysql'
 
 });
