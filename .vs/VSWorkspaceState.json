@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\routes",
+    "\\socket",
+    "\\views"
   ],
+  "SelectedNode": "\\socket\\socketManager.js",
   "PreviewInSolutionExplorer": false
 }
