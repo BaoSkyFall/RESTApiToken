@@ -7,7 +7,7 @@ var indexRouter = require('./routes/index');
 var apiRouter = require('./routes/api');
 var app = express();
 var server = app.listen(3000);
-var io = module.exports.io=require('socket.io').listen(server);
+var io = module.exports.io = require('socket.io').listen(server);
 // io.on("connection", () => {
 //   console.log("Connected!");
 // });
@@ -24,8 +24,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", '*');
-  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
   next();
 });
 app.use('/', indexRouter);
